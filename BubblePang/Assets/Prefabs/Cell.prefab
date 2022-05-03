@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2945856601043105143}
   - component: {fileID: 1587298391859681697}
+  - component: {fileID: 6609079508730469438}
   - component: {fileID: 7101838871269068312}
+  - component: {fileID: 2471026075670698748}
   m_Layer: 0
   m_Name: Cell
   m_TagString: Untagged
@@ -83,6 +85,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &6609079508730469438
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6280616177289269761}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.9047619}
+    newSize: {x: 1, y: 0.9047619}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.47619048, y: 0}
+      - {x: -0.23809524, y: -0.42857143}
+      - {x: 0.2380952, y: -0.42857143}
+      - {x: 0.47619048, y: 0}
+      - {x: 0.23809524, y: 0.4285714}
+      - {x: -0.23809524, y: 0.42857143}
 --- !u!114 &7101838871269068312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,3 +128,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d05bb6d4ad97d48954565247cd82cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1587298391859681697}
+  idleSprite: {fileID: 6750033715232265413, guid: 9eb31af92008af3409e44551d97f361e, type: 3}
+  highlightedSprite: {fileID: 3240621668641761797, guid: 9eb31af92008af3409e44551d97f361e, type: 3}
+--- !u!114 &2471026075670698748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6280616177289269761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14577cba2df20544ca2919c3ab2d6f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCell: {fileID: 7101838871269068312}

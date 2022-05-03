@@ -14,6 +14,9 @@ TextureImporter:
   - first:
       213: 3240621668641761797
     second: Cell_1
+  - first:
+      213: 3857691771022356991
+    second: Cell_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -55,7 +58,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 21

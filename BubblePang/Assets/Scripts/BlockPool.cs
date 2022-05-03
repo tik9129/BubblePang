@@ -5,6 +5,7 @@ using UnityEngine;
 public class BlockPool : MonoBehaviour
 {
     [SerializeField] private BoardSize size;
+    [Space]
     [SerializeField] private Block blockPrefab;
     [SerializeField] private Sprite[] blockSprites;
 
