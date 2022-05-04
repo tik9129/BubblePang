@@ -33,7 +33,8 @@ public class BlockPool : MonoBehaviour
     {
         Block temp = queue.Peek();
         temp.gameObject.SetActive(true);
-        temp.ChangeSprite(blockSprites[Random.Range(0, 4)]);
+        temp.index = Random.Range(0, 4);
+        temp.ChangeSprite(blockSprites[temp.index]);
         return queue.Dequeue();
     }
 }

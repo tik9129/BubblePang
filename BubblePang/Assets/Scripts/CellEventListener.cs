@@ -12,14 +12,14 @@ public class CellEventListener : MonoBehaviour
     {
         if (isSlid)
         {
-            targetCell.SetLink(true);
+            targetCell.SetLink();
         }
     }
 
     private void OnMouseDown()
     {
         isSlid = true;
-        targetCell.SetLink(true);
+        targetCell.SetLink();
     }
 
     private void OnMouseUp()

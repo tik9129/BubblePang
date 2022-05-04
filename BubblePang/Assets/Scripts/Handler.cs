@@ -11,9 +11,9 @@ public class Handler : MonoBehaviour
         next = handler;
     }
 
-    protected virtual void OnCellLink(Offset offset)
+    protected virtual bool OnCellLink(Offset offset)
     {
-        next.OnCellLink(offset);
+        return next.OnCellLink(offset);
     }
 
     protected virtual void OnLinkEnd()
