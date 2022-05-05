@@ -27,7 +27,7 @@ public class Board : Handler
                 temp.SetNext(this);
                 temp.name = temp.offset.ToString();
                 temp.transform.localPosition = pos + new Vector2(Cell.DIST_X * i, Cell.DIST_Y * j);
-                temp.PutBlock(pool.Depool());
+                temp.PutBlock(pool.Depool(), 0);
                 cells[i, j] = temp;
             }
         }
@@ -84,12 +84,13 @@ public class Board : Handler
     {
         for (int i = 0; i < size.w; i++)
         {
+            int num = 0;
             for (int j = 0; j < size.h; j++)
             {
                 Cell temp = cells[i, j];
                 if (temp.IsEmpty())
                 {
-                    temp.PutBlock(pool.Depool());
+                    temp.PutBlock(pool.Depool(), size.h - j + num++);
                 }
             }
         }

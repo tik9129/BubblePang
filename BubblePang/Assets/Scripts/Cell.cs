@@ -17,16 +17,20 @@ public class Cell : Handler
     private Block block;
     private bool isLinked = false;
 
-    public void PutBlock(Block block)
+    public void PutBlock(Block block, int blockDrop)
     {
-        block.transform.SetParent(transform, false);
         this.block = block;
+        block.transform.SetParent(transform, false);
+        if(blockDrop != 0)
+        {
+            block.transform.position += new Vector3(0, DIST_Y * blockDrop);
+        }
     }
 
     public void PutBlock(Cell cell)
     {
         block = cell.OutBlock();
-        block.transform.SetParent(transform,false);
+        block.transform.SetParent(transform);
     }
 
     public Block OutBlock()
