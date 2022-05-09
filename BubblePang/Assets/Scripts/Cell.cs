@@ -11,11 +11,18 @@ public class Cell : Handler
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Sprite idleSprite;
     [SerializeField] private Sprite highlightedSprite;
+    [Space]
+    [SerializeField] private Bubble bubble;
 
     public Offset offset { get; set; }
 
     private Block block;
     private bool isLinked = false;
+
+    private void Awake()
+    {
+        bubble.SetNext(this);
+    }
 
     public void PutBlock(Block block, int blockDrop)
     {
@@ -84,5 +91,10 @@ public class Cell : Handler
         Vector3 delta = cell.offset.ToVector3() - offset.ToVector3();
         Vector3 abs = new Vector3(Mathf.Abs(delta.x), Mathf.Abs(delta.y), Mathf.Abs(delta.z));
         return Mathf.Max(abs.x, abs.y, abs.z) < 2;
+    }
+
+    public void ShootBubble(Vector3 dest)
+    {
+        bubble.Shoot(dest);
     }
 }

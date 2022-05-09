@@ -20,4 +20,9 @@ public class Handler : MonoBehaviour
     {
         next.OnLinkEnd();
     }
+
+    protected virtual void OnBubblePang()
+    {
+        next.OnBubblePang();
+    }
 }

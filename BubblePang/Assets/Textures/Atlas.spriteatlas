@@ -45,11 +45,12 @@ SpriteAtlas:
     packables:
     - {fileID: 2800000, guid: 4f9e632513287434aa493fa970190997, type: 3}
     - {fileID: 2800000, guid: 19d51661d266a7b468068efc46cde211, type: 3}
-    - {fileID: 2800000, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
     - {fileID: 2800000, guid: f5aa248eb0c4a9247ba7b0b7579856b4, type: 3}
     - {fileID: 2800000, guid: 5573c41dc2e3c844dabf0d1964fe3c75, type: 3}
     - {fileID: 2800000, guid: 9eb31af92008af3409e44551d97f361e, type: 3}
     - {fileID: 2800000, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
+    - {fileID: 2800000, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+    - {fileID: 2800000, guid: a662717c08361514fabcb102895961e8, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -83,6 +84,11 @@ SpriteAtlas:
   - {fileID: 20422094977739044, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
   - {fileID: -8175667694618317906, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
   - {fileID: -6341821770563479352, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  - {fileID: 6548662777022022514, guid: a662717c08361514fabcb102895961e8, type: 3}
+  - {fileID: 8350846919417801047, guid: a662717c08361514fabcb102895961e8, type: 3}
+  - {fileID: 6957437475943380512, guid: a662717c08361514fabcb102895961e8, type: 3}
+  - {fileID: -7623102459149297515, guid: a662717c08361514fabcb102895961e8, type: 3}
+  - {fileID: 6968590382446131171, guid: a662717c08361514fabcb102895961e8, type: 3}
   - {fileID: 21300000, guid: 5573c41dc2e3c844dabf0d1964fe3c75, type: 3}
   - {fileID: 21300000, guid: f5aa248eb0c4a9247ba7b0b7579856b4, type: 3}
   m_PackedSpriteNamesToIndex:
@@ -114,6 +120,11 @@ SpriteAtlas:
   - Kraken 10
   - Kraken 11
   - Kraken 12
+  - Bubble 4
+  - Bubble 1
+  - Bubble 0
+  - Bubble 3
+  - Bubble 2
   - TimeBar
   - InformationBar
   m_RenderDataMap: {}

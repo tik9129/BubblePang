@@ -7,6 +7,7 @@ public class Board : Handler
     [SerializeField] private BoardSize size;
     [SerializeField] private Cell cellPrefab;
     [SerializeField] private BlockPool pool;
+    [SerializeField] private Kraken kraken;
 
     private Cell[,] cells;
     private Stack<Cell> linkedCells;
@@ -55,12 +56,21 @@ public class Board : Handler
         foreach (Cell temp in linkedCells)
         {
             if (linkedCells.Count > 2)
+            {
                 pool.Enpool(temp.OutBlock());
+                Vector3 dest = kraken.transform.position + new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(-0.5f, 0.5f));
+                temp.ShootBubble(dest);
+            }
             temp.Highlight(false);
         }
         linkedCells.Clear();
         DropBlocks();
         FillBlocks();
+    }
+
+    protected override void OnBubblePang()
+    {
+        kraken.Hit();
     }
 
     private void DropBlocks()

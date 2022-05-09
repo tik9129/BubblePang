@@ -397,6 +397,7 @@ GameObject:
   - component: {fileID: 1035407087}
   - component: {fileID: 1035407086}
   - component: {fileID: 1035407088}
+  - component: {fileID: 1035407089}
   m_Layer: 0
   m_Name: Kraken
   m_TagString: Untagged
@@ -462,12 +463,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035407085}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1897797815}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1035407088
 Animator:
@@ -488,6 +489,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1035407089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035407085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc548e9c79d959448750a0dc44975c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1035407088}
 --- !u!1 &1113587889
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,6 +816,7 @@ MonoBehaviour:
   size: {fileID: 11400000, guid: 28848625d476acf41a48c784db9122a9, type: 2}
   cellPrefab: {fileID: 7101838871269068312, guid: 0b7b0887b4aff1f48be3ec7b2f945228, type: 3}
   pool: {fileID: 351643350}
+  kraken: {fileID: 1035407089}
 --- !u!4 &1897797815
 Transform:
   m_ObjectHideFlags: 0
@@ -812,7 +827,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1035407087}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
