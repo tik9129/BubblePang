@@ -17,7 +17,7 @@ public class Bubble : Handler
 
     void Update()
     {
-        this.transform.position = Vector3.MoveTowards(this.transform.position, destination, 0.15f);
+        this.transform.position = Vector3.MoveTowards(this.transform.position, destination, 0.2f);
         if(transform.position == destination && !isPopped)
         {
             isPopped = true;

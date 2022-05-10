@@ -3,10 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Handler
 {
+    [SerializeField] Board board;
+    [SerializeField] FloatVariable score;
+    [SerializeField] Timer timer;
+
     private void Awake()
     {
         Application.targetFrameRate = 60;
+        board.SetNext(this);
+        score.value = 0;
+    }
+
+    private void Update()
+    {
+
+    }
+
+    protected override void OnBubblePang()
+    {
+        score.value += 50;
     }
 }

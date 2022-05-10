@@ -71,6 +71,7 @@ public class Board : Handler
     protected override void OnBubblePang()
     {
         kraken.Hit();
+        base.OnBubblePang();
     }
 
     private void DropBlocks()
