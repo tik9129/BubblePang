@@ -12,7 +12,7 @@ namespace View
 
         private void Update()
         {
-            text.text = score.value.ToString();
+            text.text = string.Format("{0:D8}", (int)score.value);
         }
     }
 }

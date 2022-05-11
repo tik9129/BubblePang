@@ -10,4 +10,9 @@ public class Kraken : MonoBehaviour
     {
         animator.SetTrigger("Hit");
     }
+
+    public void Exit()
+    {
+        animator.SetTrigger("Exit");
+    }
 }

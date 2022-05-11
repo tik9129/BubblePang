@@ -34,6 +34,14 @@ public class Board : Handler
         }
     }
 
+    public void Freeze()
+    {
+        foreach(Cell temp in cells)
+        {
+            temp.Highlight(true);
+        }
+    }
+
     protected override bool OnCellLink(Offset offset)
     {
         Cell temp = cells[offset.col, offset.row];
@@ -105,5 +113,11 @@ public class Board : Handler
                 }
             }
         }
+    }
+
+    public void End()
+    {
+        OnLinkEnd();
+        kraken.Exit();
     }
 }

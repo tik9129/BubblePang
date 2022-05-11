@@ -18,7 +18,11 @@ public class GameManager : Handler
 
     private void Update()
     {
-
+        if(timer.IsTimeOver())
+        {
+            board.Freeze();
+            board.End();
+        }
     }
 
     protected override void OnBubblePang()

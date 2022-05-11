@@ -26,6 +26,9 @@ TextureImporter:
   - first:
       213: 8508771087518894038
     second: Block_3
+  - first:
+      213: -736939436940944266
+    second: Block_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -194,6 +197,27 @@ TextureImporter:
       bones: []
       spriteID: 6d78da2093a351670800000000000000
       internalID: 8508771087518894038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Block_4
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c98209c7dd5c5f0800000000000000
+      internalID: -736939436940944266
       vertices: []
       indices: 
       edges: []

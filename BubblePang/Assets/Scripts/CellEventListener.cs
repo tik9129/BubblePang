@@ -18,8 +18,11 @@ public class CellEventListener : MonoBehaviour
 
     private void OnMouseDown()
     {
-        isSlid = true;
-        targetCell.SetLink();
+        if (!targetCell.IsLinked())
+        {
+            isSlid = true;
+            targetCell.SetLink();
+        }
     }
 
     private void OnMouseUp()

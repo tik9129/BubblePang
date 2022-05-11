@@ -12,16 +12,20 @@ namespace View
         [SerializeField] RectTransform gauge;
 
         private float baseWidth;
+        private float playTime;
 
         private void Awake()
         {
             baseWidth = gauge.rect.width;
+            playTime = time.value;
         }
 
         private void Update()
         {
-            clock.text = Mathf.Floor(time.value)+"";
-            float w = baseWidth * time.value / 90;
+            //clock.text = Mathf.Ceil(time.value)+"";
+            clock.text = string.Format("{0:D2}", (int)Mathf.Ceil(time.value));
+
+            float w = baseWidth * time.value / playTime;
             float h = gauge.rect.height;
             gauge.sizeDelta = new Vector2(w,h);
         }
