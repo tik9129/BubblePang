@@ -41,6 +41,45 @@ TextureImporter:
   - first:
       213: -6341821770563479352
     second: Kraken 12
+  - first:
+      213: 8288806462282910920
+    second: Kraken_idle_0
+  - first:
+      213: -6663538413871166027
+    second: Kraken_idle_1
+  - first:
+      213: -7935934363591691658
+    second: Kraken_idle_2
+  - first:
+      213: 2134862901203555567
+    second: Kraken_idle_3
+  - first:
+      213: -6348946238802791851
+    second: Kraken_idle_4
+  - first:
+      213: -4940133097832892662
+    second: Kraken_idle_5
+  - first:
+      213: 713840956983809103
+    second: Kraken_Hit_0
+  - first:
+      213: 932637591234285282
+    second: Kraken_Exit_0
+  - first:
+      213: -7151892908663563914
+    second: Kraken_Exit_1
+  - first:
+      213: 113940791304462486
+    second: Kraken_Exit_2
+  - first:
+      213: 5138653745555146972
+    second: Kraken_Exit_3
+  - first:
+      213: 3827964371949991136
+    second: Kraken_Exit_4
+  - first:
+      213: 3768771436035508089
+    second: Kraken_Exit_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,7 +157,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kraken 0
+      name: Kraken_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -132,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c7153a0da117c3400800000000000000
-      internalID: 305243234737803644
+      spriteID: 8ccc55cbf81c70370800000000000000
+      internalID: 8288806462282910920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kraken 1
+      name: Kraken_idle_1
       rect:
         serializedVersion: 2
         x: 38
@@ -153,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 47f5a701d2eb7d9e0800000000000000
-      internalID: -1596598442120290444
+      spriteID: 5bd0a061e1b5683a0800000000000000
+      internalID: -6663538413871166027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kraken 2
+      name: Kraken_idle_2
       rect:
         serializedVersion: 2
         x: 76
@@ -174,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: baf616b85880510d0800000000000000
-      internalID: -3452844169647525973
+      spriteID: 6723d412eb5edd190800000000000000
+      internalID: -7935934363591691658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kraken 3
+      name: Kraken_idle_3
       rect:
         serializedVersion: 2
         x: 114
@@ -195,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a16be1a20b6e7daa0800000000000000
-      internalID: -6136182322973723110
+      spriteID: fe4d5666f7e80ad10800000000000000
+      internalID: 2134862901203555567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kraken 4
+      name: Kraken_idle_4
       rect:
         serializedVersion: 2
         x: 0
@@ -216,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d112b24609a10a370800000000000000
-      internalID: 8331688518093578525
+      spriteID: 5527b12b80304e7a0800000000000000
+      internalID: -6348946238802791851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kraken 5
+      name: Kraken_idle_5
       rect:
         serializedVersion: 2
         x: 38
@@ -237,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dca672aa12aa1a570800000000000000
-      internalID: 8476243035253336781
+      spriteID: a0735881f1f117bb0800000000000000
+      internalID: -4940133097832892662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kraken 6
+      name: Kraken_Hit_0
       rect:
         serializedVersion: 2
         x: 76
@@ -258,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3dab9ddfdc9de3080800000000000000
-      internalID: -9205681109548287277
+      spriteID: f44152b719218e900800000000000000
+      internalID: 713840956983809103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kraken 7
+      name: Kraken_Exit_0
       rect:
         serializedVersion: 2
         x: 114
@@ -279,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c98802bbabb17be80800000000000000
-      internalID: -8163025310768396132
+      spriteID: 2ee02b9a2f461fc00800000000000000
+      internalID: 932637591234285282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kraken 8
+      name: Kraken_Exit_1
       rect:
         serializedVersion: 2
         x: 0
@@ -300,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc594d175a27c2f90800000000000000
-      internalID: -6977075667798813235
+      spriteID: 679197bba4f5fbc90800000000000000
+      internalID: -7151892908663563914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kraken 9
+      name: Kraken_Exit_2
       rect:
         serializedVersion: 2
         x: 38
@@ -321,14 +360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd7401bcb6ffef760800000000000000
-      internalID: 7493707668424509403
+      spriteID: 6902127cb8cc49100800000000000000
+      internalID: 113940791304462486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kraken 10
+      name: Kraken_Exit_3
       rect:
         serializedVersion: 2
         x: 76
@@ -342,14 +381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 429a7b489cd884000800000000000000
-      internalID: 20422094977739044
+      spriteID: cd88b871b5a205740800000000000000
+      internalID: 5138653745555146972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kraken 11
+      name: Kraken_Exit_4
       rect:
         serializedVersion: 2
         x: 114
@@ -363,14 +402,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eab63ac5c813a8e80800000000000000
-      internalID: -8175667694618317906
+      spriteID: 0e43eea9059af1530800000000000000
+      internalID: 3827964371949991136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kraken 12
+      name: Kraken_Exit_5
       rect:
         serializedVersion: 2
         x: 0
@@ -384,8 +423,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c899b833b25df7a0800000000000000
-      internalID: -6341821770563479352
+      spriteID: 977098c37ad5d4430800000000000000
+      internalID: 3768771436035508089
       vertices: []
       indices: 
       edges: []

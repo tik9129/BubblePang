@@ -13,6 +13,7 @@ public class Cell : Handler
     [SerializeField] private Sprite highlightedSprite;
     [Space]
     [SerializeField] private Bubble bubble;
+    [SerializeField] private GameObject effect;
 
     public Offset offset { get; set; }
 
@@ -24,9 +25,15 @@ public class Cell : Handler
         bubble.SetNext(this);
     }
 
+    public int GetBlockIndex()
+    {
+        return block.index;
+    }
+
     public void PutBlock(Block block, int blockDrop)
     {
         this.block = block;
+        block.SetNext(this);
         block.transform.SetParent(transform, false);
         if(blockDrop != 0)
         {
@@ -61,10 +68,17 @@ public class Cell : Handler
     
     public void SetLink()
     {
-        bool flag = OnCellLink(offset);
-        if (flag)
+        if(block.index >= 4)
         {
-            Highlight(true);
+            OnItemUsed(offset, block.index);
+        }
+        else
+        {
+            bool flag = OnCellLink(offset);
+            if (flag)
+            {
+                Highlight(true);
+            }
         }
     }
 
@@ -93,8 +107,14 @@ public class Cell : Handler
         return Mathf.Max(abs.x, abs.y, abs.z) < 2;
     }
 
-    public void ShootBubble(Vector3 dest)
+    public void ShootBubble()
     {
-        bubble.Shoot(dest);
+        bubble.Shoot();
+    }
+
+    public void BreakBlock()
+    {
+        effect.SetActive(true);
+        bubble.Shoot();
     }
 }

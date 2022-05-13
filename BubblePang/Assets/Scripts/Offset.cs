@@ -13,6 +13,12 @@ public struct Offset
         row = r;
     }
 
+    public Offset(Vector3 vector)
+    {
+        col = (int) vector.x;
+        row = (int)(vector.y + (vector.x + ((int)vector.x & 1)) / 2);
+    }
+
     public override string ToString()
     {
         return col + ", " + row;

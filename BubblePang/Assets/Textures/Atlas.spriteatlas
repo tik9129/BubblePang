@@ -65,27 +65,29 @@ SpriteAtlas:
   - {fileID: -9058802677452769114, guid: 19d51661d266a7b468068efc46cde211, type: 3}
   - {fileID: 2982042711547964662, guid: 19d51661d266a7b468068efc46cde211, type: 3}
   - {fileID: -6852845490552644379, guid: 19d51661d266a7b468068efc46cde211, type: 3}
-  - {fileID: 8508771087518894038, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
-  - {fileID: -1470946536411257380, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
-  - {fileID: 2189487477073400709, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
-  - {fileID: 2537882373423050008, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
+  - {fileID: 5937300090042828850, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
+  - {fileID: -2230640015494873224, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
+  - {fileID: 1515622694917723629, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
+  - {fileID: 1503016370545623098, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
+  - {fileID: 1489830567317918739, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
+  - {fileID: 38433539612607256, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
   - {fileID: 21300000, guid: 4f9e632513287434aa493fa970190997, type: 3}
   - {fileID: 21300000, guid: 56daf05696a8058478711b2231e0a75f, type: 3}
   - {fileID: 6750033715232265413, guid: 9eb31af92008af3409e44551d97f361e, type: 3}
   - {fileID: 3240621668641761797, guid: 9eb31af92008af3409e44551d97f361e, type: 3}
-  - {fileID: 7493707668424509403, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
-  - {fileID: -6977075667798813235, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
-  - {fileID: -1596598442120290444, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
-  - {fileID: 305243234737803644, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
-  - {fileID: -6136182322973723110, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
-  - {fileID: -3452844169647525973, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
-  - {fileID: 8476243035253336781, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
-  - {fileID: 8331688518093578525, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
-  - {fileID: -8163025310768396132, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
-  - {fileID: -9205681109548287277, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
-  - {fileID: 20422094977739044, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
-  - {fileID: -8175667694618317906, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
-  - {fileID: -6341821770563479352, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  - {fileID: 713840956983809103, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  - {fileID: -7151892908663563914, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  - {fileID: 932637591234285282, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  - {fileID: 5138653745555146972, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  - {fileID: 2134862901203555567, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  - {fileID: 113940791304462486, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  - {fileID: -7935934363591691658, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  - {fileID: 3768771436035508089, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  - {fileID: -6663538413871166027, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  - {fileID: 3827964371949991136, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  - {fileID: 8288806462282910920, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  - {fileID: -4940133097832892662, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  - {fileID: -6348946238802791851, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
   - {fileID: 6548662777022022514, guid: a662717c08361514fabcb102895961e8, type: 3}
   - {fileID: 8350846919417801047, guid: a662717c08361514fabcb102895961e8, type: 3}
   - {fileID: 6957437475943380512, guid: a662717c08361514fabcb102895961e8, type: 3}
@@ -102,27 +104,29 @@ SpriteAtlas:
   - Wave 1
   - Wave 2
   - Wave 3
-  - Block_3
-  - Block_2
-  - Block_1
-  - Block_0
+  - Blocks_4
+  - Blocks_5
+  - Blocks_0
+  - Blocks_1
+  - Blocks_2
+  - Blocks_3
   - Background
   - gauge
   - Cell_0
   - Cell_1
-  - Kraken 9
-  - Kraken 8
-  - Kraken 1
-  - Kraken 0
-  - Kraken 3
-  - Kraken 2
-  - Kraken 5
-  - Kraken 4
-  - Kraken 7
-  - Kraken 6
-  - Kraken 10
-  - Kraken 11
-  - Kraken 12
+  - Kraken_Hit_0
+  - Kraken_Exit_1
+  - Kraken_Exit_0
+  - Kraken_Exit_3
+  - Kraken_idle_3
+  - Kraken_Exit_2
+  - Kraken_idle_2
+  - Kraken_Exit_5
+  - Kraken_idle_1
+  - Kraken_Exit_4
+  - Kraken_idle_0
+  - Kraken_idle_5
+  - Kraken_idle_4
   - Bubble 4
   - Bubble 1
   - Bubble 0

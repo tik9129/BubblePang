@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class GameManager : Handler
 {
     [SerializeField] Board board;
+    [SerializeField] Kraken kraken;
     [SerializeField] FloatVariable score;
     [SerializeField] Timer timer;
 
@@ -20,12 +21,12 @@ public class GameManager : Handler
     {
         if(timer.IsTimeOver())
         {
+            kraken.Exit();
             board.Freeze();
-            board.End();
         }
     }
 
-    protected override void OnBubblePang()
+    public void AddScore(int num)
     {
         score.value += 50;
     }

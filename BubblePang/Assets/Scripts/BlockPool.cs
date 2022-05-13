@@ -7,7 +7,6 @@ public class BlockPool : MonoBehaviour
     [SerializeField] private BoardSize size;
     [Space]
     [SerializeField] private Block blockPrefab;
-    [SerializeField] private Sprite[] blockSprites;
 
     private Queue<Block> queue;
 
@@ -16,9 +15,8 @@ public class BlockPool : MonoBehaviour
         queue = new Queue<Block>();
         for (int i = 0; i < size.w * size.h; ++i)
         {
-            Block temp = Instantiate(blockPrefab, transform);
-            temp.gameObject.SetActive(false);
-            queue.Enqueue(temp);
+            Block temp = Instantiate(blockPrefab);
+            Enpool(temp);
         }
     }
 
@@ -26,6 +24,7 @@ public class BlockPool : MonoBehaviour
     {
         block.transform.SetParent(transform, false);
         block.gameObject.SetActive(false);
+        block.index = Random.Range(0, 4);
         queue.Enqueue(block);
     }
 
@@ -33,8 +32,12 @@ public class BlockPool : MonoBehaviour
     {
         Block temp = queue.Peek();
         temp.gameObject.SetActive(true);
-        temp.index = Random.Range(0, 4);
-        temp.ChangeSprite(blockSprites[temp.index]);
         return queue.Dequeue();
+    }
+
+    public void CreateItem()
+    {
+        Block temp = queue.Peek();
+        temp.index = Random.Range(4, 6);
     }
 }

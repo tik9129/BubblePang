@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2130503437397031619}
   - component: {fileID: 1786114018262669702}
+  - component: {fileID: 2663469416993961929}
   - component: {fileID: 1687994362215501729}
   m_Layer: 0
   m_Name: Block
@@ -83,6 +84,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &2663469416993961929
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9140210449410783427}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.33333334
 --- !u!114 &1687994362215501729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,4 +113,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1786114018262669702}
-  animator: {fileID: 0}
+  targetCollider: {fileID: 2663469416993961929}
+  sprites:
+  - {fileID: 1515622694917723629, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
+  - {fileID: 1503016370545623098, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
+  - {fileID: 1489830567317918739, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
+  - {fileID: 38433539612607256, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
+  - {fileID: 5937300090042828850, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
+  - {fileID: -2230640015494873224, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}

@@ -284,6 +284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 348524544}
   - component: {fileID: 348524545}
+  - component: {fileID: 348524546}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -303,6 +304,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1365181535}
+  - {fileID: 1035407087}
   - {fileID: 1897797815}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -320,8 +322,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 1897797814}
+  kraken: {fileID: 1035407089}
   score: {fileID: 11400000, guid: 9c56a47410a58db4b9d7a309d8d32161, type: 2}
   timer: {fileID: 1365181536}
+--- !u!114 &348524546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348524543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7442a3c896b4c4eb834eff7487e30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2bfa8bf1f0da2304b84b019024cad739, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 348524545}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &351643348
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +382,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1897797815}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &351643350
 MonoBehaviour:
@@ -367,11 +398,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: {fileID: 11400000, guid: 28848625d476acf41a48c784db9122a9, type: 2}
   blockPrefab: {fileID: 1687994362215501729, guid: 8fb86300ee902464397dc19a8d9eae8c, type: 3}
-  blockSprites:
-  - {fileID: 2537882373423050008, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
-  - {fileID: 2189487477073400709, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
-  - {fileID: -1470946536411257380, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
-  - {fileID: 8508771087518894038, guid: 118e24d20dcfc2d4e8e6f34d1ba200c9, type: 3}
 --- !u!1 &435714397
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,6 +675,7 @@ GameObject:
   - component: {fileID: 1035407086}
   - component: {fileID: 1035407088}
   - component: {fileID: 1035407089}
+  - component: {fileID: 1035407090}
   m_Layer: 0
   m_Name: Kraken
   m_TagString: Untagged
@@ -696,7 +723,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 305243234737803644, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
+  m_Sprite: {fileID: 8288806462282910920, guid: ccbff9ebc86525a49ad7e1588a860957, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -715,11 +742,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035407085}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7, z: 0}
+  m_LocalPosition: {x: 0, y: 3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1897797815}
-  m_RootOrder: 0
+  m_Father: {fileID: 348524544}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1035407088
 Animator:
@@ -753,6 +780,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1035407088}
+--- !u!114 &1035407090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035407085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7442a3c896b4c4eb834eff7487e30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2bfa8bf1f0da2304b84b019024cad739, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1035407089}
+        m_TargetAssemblyTypeName: Kraken, Assembly-CSharp
+        m_MethodName: Hit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1113587889
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,7 +1167,6 @@ MonoBehaviour:
   size: {fileID: 11400000, guid: 28848625d476acf41a48c784db9122a9, type: 2}
   cellPrefab: {fileID: 7101838871269068312, guid: 0b7b0887b4aff1f48be3ec7b2f945228, type: 3}
   pool: {fileID: 351643350}
-  kraken: {fileID: 1035407089}
 --- !u!4 &1897797815
 Transform:
   m_ObjectHideFlags: 0
@@ -1124,10 +1178,9 @@ Transform:
   m_LocalPosition: {x: 0, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1035407087}
   - {fileID: 351643349}
   m_Father: {fileID: 348524544}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2071896066
 GameObject:

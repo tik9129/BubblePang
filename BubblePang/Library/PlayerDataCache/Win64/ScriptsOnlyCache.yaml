@@ -8,10 +8,15 @@ ScriptsOnlyBuild:
     - Bubble
     - Cell
     - CellEventListener
+    - Effect
+    - FloatVariable
+    - GameEvent
+    - GameEventListener
     - GameManager
     - Kraken
-    - Score
-    - View.ScoreText
+    - Timer
+    - View.ScoreBoard
+    - View.Timer
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -32,10 +37,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -92,29 +95,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 2892}
+      Script: {instanceID: 2828}
     - Class: 114
-      Script: {instanceID: 2914}
+      Script: {instanceID: 2894}
     - Class: 114
-      Script: {instanceID: 3154}
+      Script: {instanceID: 2916}
     - Class: 114
-      Script: {instanceID: 3348}
+      Script: {instanceID: 2968}
     - Class: 114
-      Script: {instanceID: 3410}
+      Script: {instanceID: 3158}
     - Class: 114
-      Script: {instanceID: 3436}
+      Script: {instanceID: 3352}
     - Class: 114
-      Script: {instanceID: 3964}
+      Script: {instanceID: 3414}
     - Class: 114
-      Script: {instanceID: 3988}
+      Script: {instanceID: 3440}
     - Class: 114
-      Script: {instanceID: 5188}
+      Script: {instanceID: 3544}
     - Class: 114
-      Script: {instanceID: 5232}
+      Script: {instanceID: 3776}
     - Class: 114
-      Script: {instanceID: 23214}
+      Script: {instanceID: 3972}
     - Class: 114
-      Script: {instanceID: 23234}
+      Script: {instanceID: 3996}
+    - Class: 114
+      Script: {instanceID: 4018}
+    - Class: 114
+      Script: {instanceID: 4408}
+    - Class: 114
+      Script: {instanceID: 4528}
+    - Class: 114
+      Script: {instanceID: 5202}
+    - Class: 114
+      Script: {instanceID: 5246}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -138,7 +151,7 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 6586d14cd8b7a95308a2530c3cd50c61
+      Hash: 9cc3c326226890c384fc6698695022ce
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Block
@@ -222,7 +235,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: 3679641ea737ba1c0453c3bbe7d37265
+      Hash: e3f1e9b3c1c9679211b809906229ebee
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Cell
@@ -282,7 +295,7 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
-      Hash: 39386d4f069e12f82bb7b2f25d492070
+      Hash: 7107358dfd7e5fdd1cadc7cbfaf01316
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -292,6 +305,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 8f344d0377e8bc21ea2c3d43d044ce1d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: View
+    className: ScoreBoard
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -328,6 +347,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: db120e436708444217ebba78a81288b5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameEventListener
   - hash:
       serializedVersion: 2
       Hash: 760787567e1b60d64a3e421ab83ee14a
@@ -432,6 +457,12 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
+      Hash: 13ad5d7e7a8efd3d5144e4f8031da917
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: View
+    className: Timer
+  - hash:
+      serializedVersion: 2
       Hash: 349d08daa6108b9a28f8c38fd40ce96f
     assemblyName: Unity.2D.SpriteShape.Runtime.dll
     namespaceName: UnityEngine.U2D
@@ -448,6 +479,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ContentSizeFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Effect
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -484,6 +521,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BlockPool
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameEvent
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -552,6 +595,12 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 9ebec44adee6a8577375b851d83e1863
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Timer
+  - hash:
+      serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -568,6 +617,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 85af9a2367da2c6ce09bf448bd7d9ae1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FloatVariable
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -660,7 +715,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 30f3213a6e218a461fa00e428f22d3eb
+      Hash: 4e184187f9ff7838ed8d525eec47c530
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Bubble
@@ -718,18 +773,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: 6f4483d4f9cd6d8ba8f6c860d74fa945
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Score
-  - hash:
-      serializedVersion: 2
-      Hash: eb304fb2e17eda214e81b59b9356b0ed
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: View
-    className: ScoreText
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity

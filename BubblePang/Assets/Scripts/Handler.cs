@@ -21,8 +21,8 @@ public class Handler : MonoBehaviour
         next.OnLinkEnd();
     }
 
-    protected virtual void OnBubblePang()
+    protected virtual void OnItemUsed(Offset offset, int index)
     {
-        next.OnBubblePang();
+        next.OnItemUsed(offset, index);
     }
 }

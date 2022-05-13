@@ -7,7 +7,6 @@ public class Board : Handler
     [SerializeField] private BoardSize size;
     [SerializeField] private Cell cellPrefab;
     [SerializeField] private BlockPool pool;
-    [SerializeField] private Kraken kraken;
 
     private Cell[,] cells;
     private Stack<Cell> linkedCells;
@@ -40,6 +39,7 @@ public class Board : Handler
         {
             temp.Highlight(true);
         }
+        OnLinkEnd();
     }
 
     protected override bool OnCellLink(Offset offset)
@@ -65,21 +65,74 @@ public class Board : Handler
         {
             if (linkedCells.Count > 2)
             {
+                temp.BreakBlock();
                 pool.Enpool(temp.OutBlock());
-                Vector3 dest = kraken.transform.position + new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(-0.5f, 0.5f));
-                temp.ShootBubble(dest);
+
             }
             temp.Highlight(false);
         }
+
+        if (linkedCells.Count > 7)
+        {
+            pool.CreateItem();
+            linkedCells.Peek().PutBlock(pool.Depool(),0);
+        }
+
+        DropBlocks();
+        FillBlocks();
         linkedCells.Clear();
+    }
+
+    protected override void OnItemUsed(Offset offset, int index)
+    {
+        pool.Enpool(cells[offset.col, offset.row].OutBlock());
+
+        if(index == 5)
+        {
+            BreakSameBlock();
+        }
+        else
+        {
+            ExplodeBlock(offset);
+        }
+
         DropBlocks();
         FillBlocks();
     }
 
-    protected override void OnBubblePang()
+    private void BreakSameBlock()
     {
-        kraken.Hit();
-        base.OnBubblePang();
+        int random = Random.Range(0, 4);
+        foreach (Cell temp in cells)
+        {
+            if (!temp.IsEmpty() && temp.GetBlockIndex() == random)
+            {
+                temp.BreakBlock();
+                pool.Enpool(temp.OutBlock());
+            }
+        }
+    }
+
+    private void ExplodeBlock(Offset offset)
+    {
+        Vector3[] neighbors = { 
+            new Vector3(+1, 0, -1), new Vector3(+1, -1, 0), new Vector3(0, -1, +1),
+            new Vector3(-1, 0, +1), new Vector3(-1, +1, 0), new Vector3(0, +1, -1)
+        };
+
+        for (int i=0;i<neighbors.Length;++i)
+        {
+            for(int j=1;j<3;++j)
+            {
+                Offset temp = new Offset(offset.ToVector3() + neighbors[i] * j);
+                if (0 <= temp.col && temp.col < size.w && 0 <= temp.row && temp.row < size.h)
+                {
+                    Cell cell = cells[temp.col, temp.row];
+                    cell.BreakBlock();
+                    pool.Enpool(cell.OutBlock());
+                }
+            }
+        }
     }
 
     private void DropBlocks()
@@ -113,11 +166,5 @@ public class Board : Handler
                 }
             }
         }
-    }
-
-    public void End()
-    {
-        OnLinkEnd();
-        kraken.Exit();
     }
 }
