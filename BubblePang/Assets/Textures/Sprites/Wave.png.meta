@@ -26,6 +26,30 @@ TextureImporter:
   - first:
       213: -4595823006716697103
     second: Wave 7
+  - first:
+      213: 5966183693971846210
+    second: Wave_idle_0
+  - first:
+      213: -2715339092596656708
+    second: Wave_idle_1
+  - first:
+      213: -1161685304791977000
+    second: Wave_idle_2
+  - first:
+      213: 1876513929003342134
+    second: Wave_idle_3
+  - first:
+      213: -7437902112435680115
+    second: Wave_idle_4
+  - first:
+      213: 3019320120051391207
+    second: Wave_idle_5
+  - first:
+      213: -7327860537647353461
+    second: Wave_idle_6
+  - first:
+      213: 2306127768805585163
+    second: Wave_idle_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,169 +127,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wave 0
+      name: Wave_idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 136
         width: 117
         height: 68
-      alignment: 7
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c41483bef2cfdb0a0800000000000000
-      internalID: -6864052974302772916
+      spriteID: 2447bef95742cc250800000000000000
+      internalID: 5966183693971846210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wave 1
+      name: Wave_idle_1
       rect:
         serializedVersion: 2
         x: 117
         y: 136
         width: 117
         height: 68
-      alignment: 7
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a8f110e5faa84280800000000000000
-      internalID: -9058802677452769114
+      spriteID: cb57b055b7d215ad0800000000000000
+      internalID: -2715339092596656708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wave 2
+      name: Wave_idle_2
       rect:
         serializedVersion: 2
         x: 234
         y: 136
         width: 117
         height: 68
-      alignment: 7
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fcebdeeb08526920800000000000000
-      internalID: 2982042711547964662
+      spriteID: 8d33513ce5dd0efe0800000000000000
+      internalID: -1161685304791977000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wave 3
+      name: Wave_idle_3
       rect:
         serializedVersion: 2
         x: 0
         y: 68
         width: 117
         height: 68
-      alignment: 7
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ecd8f2955dc5e0a0800000000000000
-      internalID: -6852845490552644379
+      spriteID: 639115ae977ba0a10800000000000000
+      internalID: 1876513929003342134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wave 4
+      name: Wave_idle_4
       rect:
         serializedVersion: 2
         x: 117
         y: 68
         width: 117
         height: 68
-      alignment: 7
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06c7f44a47b04aae0800000000000000
-      internalID: -1539092577053082528
+      spriteID: d8cc42abf6347c890800000000000000
+      internalID: -7437902112435680115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wave 5
+      name: Wave_idle_5
       rect:
         serializedVersion: 2
         x: 234
         y: 68
         width: 117
         height: 68
-      alignment: 7
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d15f2d58cbdd5d9b0800000000000000
-      internalID: -5055891204884728547
+      spriteID: 7ea5ad2f6a7c6e920800000000000000
+      internalID: 3019320120051391207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wave 6
+      name: Wave_idle_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 117
         height: 68
-      alignment: 7
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e0cfba218c7b29c0800000000000000
-      internalID: -3950927353877643034
+      spriteID: b813de96aa53e4a90800000000000000
+      internalID: -7327860537647353461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wave 7
+      name: Wave_idle_7
       rect:
         serializedVersion: 2
         x: 117
         y: 0
         width: 117
         height: 68
-      alignment: 7
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f5651a335b5830c0800000000000000
-      internalID: -4595823006716697103
+      spriteID: b013252ccf2010020800000000000000
+      internalID: 2306127768805585163
       vertices: []
       indices: 
       edges: []

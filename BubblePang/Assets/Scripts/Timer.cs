@@ -4,30 +4,60 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] FloatVariable time;
-    [SerializeField] float playTime;
-    private float startTime;
+    [SerializeField] FloatVariable readyTime;
+    [SerializeField] FloatVariable playTime;
+    [SerializeField] float defaultTime;
 
-    private void Awake()
+    private float startTime;
+    private bool isGameReady = false;
+    private bool isGameStart = false;
+
+    private void OnEnable()
     {
-        startTime = Time.time;
-        time.value = playTime;
+        readyTime.value = 3;
+        playTime.value = defaultTime;
     }
 
     void Update()
     {
-        if(time.value > 0)
+        if (isGameReady)
         {
-            time.value = playTime - (Time.time - startTime);
+            readyTime.value -= Time.deltaTime;
+            if (readyTime.value < -1)
+            {
+                isGameReady = false;
+            }
         }
-        else
+
+        if (isGameStart)
         {
-            time.value = 0;
+            playTime.value -= Time.deltaTime;
+            if (playTime.value < 0)
+            {
+                isGameStart = false;
+            }
         }
+    }
+
+    public void RunReadyTimer()
+    {
+        startTime = Time.time;
+        isGameReady = true;
+    }
+
+    public void RunPlayTimer()
+    {
+        startTime = Time.time;
+        isGameStart = true;
+    }
+
+    public bool IsGameStart()
+    {
+        return readyTime.value < 0;
     }
 
     public bool IsTimeOver()
     {
-        return time.value == 0;
+        return playTime.value < 0;
     }
 }

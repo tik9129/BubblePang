@@ -22,10 +22,13 @@ public class BlockPool : MonoBehaviour
 
     public void Enpool(Block block)
     {
-        block.transform.SetParent(transform, false);
-        block.gameObject.SetActive(false);
-        block.index = Random.Range(0, 4);
-        queue.Enqueue(block);
+        if(block != null)
+        {
+            block.transform.SetParent(transform, false);
+            block.gameObject.SetActive(false);
+            block.index = Random.Range(0, 4);
+            queue.Enqueue(block);
+        }
     }
 
     public Block Depool()

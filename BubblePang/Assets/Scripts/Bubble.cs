@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Bubble : Handler
+public class Bubble : MonoBehaviour
 {
     [SerializeField] Animator animator;
 

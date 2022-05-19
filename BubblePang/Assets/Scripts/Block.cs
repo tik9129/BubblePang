@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Block : Handler
+public class Block : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Sprite[] sprites;
@@ -17,7 +17,7 @@ public class Block : Handler
 
     private void Update()
     {
-        transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(transform.localPosition.x, 0), 0.3f);
+        Vector3 move = Vector3.MoveTowards(transform.localPosition, new Vector3(transform.localPosition.x, 0), 0.3f);
+        transform.localPosition = move;
     }
-
 }

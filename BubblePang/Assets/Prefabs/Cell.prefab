@@ -190,7 +190,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 6750033715232265413, guid: 9eb31af92008af3409e44551d97f361e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -248,6 +248,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1587298391859681697}
   idleSprite: {fileID: 6750033715232265413, guid: 9eb31af92008af3409e44551d97f361e, type: 3}
   highlightedSprite: {fileID: 3240621668641761797, guid: 9eb31af92008af3409e44551d97f361e, type: 3}
+  targetCollider: {fileID: 6609079508730469438}
   bubble: {fileID: 881098313302465606}
   effect: {fileID: 211416427894948507}
 --- !u!114 &2471026075670698748

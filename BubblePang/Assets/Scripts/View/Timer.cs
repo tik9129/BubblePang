@@ -22,7 +22,6 @@ namespace View
 
         private void Update()
         {
-            //clock.text = Mathf.Ceil(time.value)+"";
             clock.text = string.Format("{0:D2}", (int)Mathf.Ceil(time.value));
 
             float w = baseWidth * time.value / playTime;

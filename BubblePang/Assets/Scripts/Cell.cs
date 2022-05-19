@@ -12,6 +12,7 @@ public class Cell : Handler
     [SerializeField] private Sprite idleSprite;
     [SerializeField] private Sprite highlightedSprite;
     [Space]
+    [SerializeField] private Collider2D targetCollider;
     [SerializeField] private Bubble bubble;
     [SerializeField] private GameObject effect;
 
@@ -19,11 +20,6 @@ public class Cell : Handler
 
     private Block block;
     private bool isLinked = false;
-
-    private void Awake()
-    {
-        bubble.SetNext(this);
-    }
 
     public int GetBlockIndex()
     {
@@ -33,7 +29,6 @@ public class Cell : Handler
     public void PutBlock(Block block, int blockDrop)
     {
         this.block = block;
-        block.SetNext(this);
         block.transform.SetParent(transform, false);
         if(blockDrop != 0)
         {
@@ -63,19 +58,20 @@ public class Cell : Handler
     {
         isLinked = flag;
         spriteRenderer.sprite = flag ? highlightedSprite : idleSprite;
-        spriteRenderer.sortingOrder = flag ? 2 : 0;
+        spriteRenderer.sortingOrder = flag ? 3 : 1;
+        targetCollider.enabled = !flag;
     }
     
     public void SetLink()
     {
-        if(block.index >= 4)
+        bool flag = OnCellLink(offset);
+        if (flag)
         {
-            OnItemUsed(offset, block.index);
-        }
-        else
-        {
-            bool flag = OnCellLink(offset);
-            if (flag)
+            if (block.index >= 4)
+            {
+                OnItemUsed(offset, block.index);
+            }
+            else
             {
                 Highlight(true);
             }
@@ -114,6 +110,10 @@ public class Cell : Handler
 
     public void BreakBlock()
     {
+        if(block != null && block.index >= 4)
+        {
+            OnItemUsed(offset, block.index);
+        }
         effect.SetActive(true);
         bubble.Shoot();
     }
