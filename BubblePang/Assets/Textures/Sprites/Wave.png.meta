@@ -3,30 +3,6 @@ guid: 19d51661d266a7b468068efc46cde211
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6864052974302772916
-    second: Wave 0
-  - first:
-      213: -9058802677452769114
-    second: Wave 1
-  - first:
-      213: 2982042711547964662
-    second: Wave 2
-  - first:
-      213: -6852845490552644379
-    second: Wave 3
-  - first:
-      213: -1539092577053082528
-    second: Wave 4
-  - first:
-      213: -5055891204884728547
-    second: Wave 5
-  - first:
-      213: -3950927353877643034
-    second: Wave 6
-  - first:
-      213: -4595823006716697103
-    second: Wave 7
-  - first:
       213: 5966183693971846210
     second: Wave_idle_0
   - first:

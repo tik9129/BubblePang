@@ -1,36 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object;
 using View;
-using UnityEngine.Events;
 
-public class GameManager : Handler
+public class GameManager : MonoBehaviour
 {
     [SerializeField] Window window;
     [SerializeField] Board board;
     [SerializeField] Kraken kraken;
     [SerializeField] FloatVariable score;
+    [SerializeField] FloatVariable combo;
     [SerializeField] Timer timer;
 
-    public enum GameState { INIT, TITLE, START, READY, PLAY, END };
-    private GameState state;
+    private int maxCombo = 0;
+
+    public enum GameState { INIT, TITLE, START, READY, PLAY, RESULT, END };
+    public GameState state { get; set; }
 
     private void Awake()
     {
         Application.targetFrameRate = 60;
-        board.SetNext(this);
         score.value = 0;
+        combo.value = 0;
         state = GameState.INIT;
-    }
-
-    public void SetState(GameState state)
-    {
-        this.state = state;
     }
 
     private void Update()
     {
-        switch(state)
+        switch (state)
         {
             case GameState.INIT:
                 window.ShowTitleFrame();
@@ -52,19 +50,46 @@ public class GameManager : Handler
                 }
                 break;
             case GameState.PLAY:
+                if (!timer.IsConnectingCombo())
+                {
+                    combo.value = 0;
+                }
                 if (timer.IsTimeOver())
                 {
+                    SoundManager.Instance.OutBGM();
                     kraken.Exit();
                     board.EndLink();
                     board.SetFreeze(true);
-                    state = GameState.END;
+                    state = GameState.RESULT;
                 }
+                break;
+            case GameState.RESULT:
+                StartCoroutine(ShowResult());
+                state = GameState.END;
+                break;
+            case GameState.END:
                 break;
         }
     }
 
+    IEnumerator ShowResult()
+    {
+        yield return new WaitForSeconds(3);
+        combo.value = 0;
+        window.ShowResult(maxCombo, (int)score.value);
+    }
+
     public void AddScore(int num)
     {
-        score.value += num;
+        AddCombo();
+        score.value += num + combo.value * combo.value;
+    }
+
+    public void AddCombo()
+    {
+        ++combo.value;
+        if (maxCombo < combo.value)
+            maxCombo = (int)combo.value;
+        timer.ResetComboTime();
     }
 }
