@@ -7,7 +7,7 @@ namespace View
 {
     public class Ready : MonoBehaviour
     {
-        [SerializeField] private FloatVariable readyTime;
+        [SerializeField] private ScriptableFloat readyTime;
         [SerializeField] private Image targetImage;
         [SerializeField] private Sprite[] sprite;
 

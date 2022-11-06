@@ -7,7 +7,7 @@ namespace View
 {
     public class ScoreBoard : MonoBehaviour
     {
-        [SerializeField] FloatVariable score;
+        [SerializeField] ScriptableFloat score;
         [SerializeField] Text text;
 
         private void Update()

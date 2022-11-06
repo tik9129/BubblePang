@@ -8,7 +8,7 @@ namespace View
     public class Combo : MonoBehaviour
     {
         [SerializeField] Text text;
-        [SerializeField] FloatVariable combo;
+        [SerializeField] ScriptableFloat combo;
 
         void Update()
         {

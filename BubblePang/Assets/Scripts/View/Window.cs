@@ -23,7 +23,6 @@ namespace View
         public void ShowPlayFrame()
         {
             frames[1].gameObject.SetActive(true);
-            SoundManager.Instance.PlaySFX(SoundManager.SFX.START);
             StartCoroutine(MoveToPlayFrame());
         }
 

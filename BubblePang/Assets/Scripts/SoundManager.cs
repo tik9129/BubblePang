@@ -6,42 +6,18 @@ public class SoundManager : MonoBehaviour
 {
     [Space]
     [SerializeField] AudioSource bgm;
-    [SerializeField] AudioClip[] bgmClips;
-    [Space]
     [SerializeField] AudioSource sfx;
-    [SerializeField] AudioClip[] sfxClips;
-
-    public enum BGM { PLAY };
-    public enum SFX { START, PANG };
-
-    private static SoundManager instance = null;
-    public static SoundManager Instance { 
-        get
-        {
-            return instance;
-        }
+    public void PlaySFX(AudioClip clip)
+    {
+        sfx.PlayOneShot(clip);
     }
 
-    private void Awake()
+    public void PlayBGM()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-    }
-
-    public void PlayBGM(BGM index)
-    {
-        bgm.clip = bgmClips[(int)index];
         bgm.Play();
     }
-
-    public void PlaySFX(SFX index)
-    {
-        sfx.PlayOneShot(sfxClips[(int)index]);
-    }
-
-    public void OutBGM()
+    
+    public void FadeOutBGM()
     {
         StartCoroutine(FadeOut());
     }

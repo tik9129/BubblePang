@@ -7,7 +7,7 @@ namespace View
 {
     public class TimerBar : MonoBehaviour
     {
-        [SerializeField] FloatVariable time;
+        [SerializeField] ScriptableFloat time;
         [SerializeField] Text clock;
         [SerializeField] RectTransform gauge;
 

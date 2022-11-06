@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Object;
+using Objects;
 using View;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] SoundManager soundManager;
     [SerializeField] Window window;
     [SerializeField] Board board;
     [SerializeField] Kraken kraken;
-    [SerializeField] FloatVariable score;
-    [SerializeField] FloatVariable combo;
+    [SerializeField] ScriptableFloat score;
+    [SerializeField] ScriptableFloat combo;
     [SerializeField] Timer timer;
 
     private int maxCombo = 0;
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
             case GameState.TITLE:
                 break;
             case GameState.START:
+                soundManager.PlayBGM();
                 board.FillBlocks();
                 timer.RunReadyTimer();
                 state = GameState.READY;
@@ -56,7 +58,7 @@ public class GameManager : MonoBehaviour
                 }
                 if (timer.IsTimeOver())
                 {
-                    SoundManager.Instance.OutBGM();
+                    soundManager.FadeOutBGM();
                     kraken.Exit();
                     board.EndLink();
                     board.SetFreeze(true);
