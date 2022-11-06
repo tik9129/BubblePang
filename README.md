@@ -2,6 +2,9 @@
 ## 목표
   * **포코팡의 게임 방식을 모방한 모작 게임을 만드는 것**
   * **유니티의 여러 기능을 적극적으로 사용해 개발하는 것**
+  
+## 시연
+[![Video Label](http://img.youtube.com/vi/fQdfJAW6M_M/0.jpg)](https://youtu.be/fQdfJAW6M_M?t=0s)
 
 ## 기능 설명 및 게임 방식
 ### ※ 화면 구성 및 조작법
@@ -17,8 +20,8 @@
       * 팝업창의 Home 버튼 클릭시 타이틀 화면으로 넘어가며 게임이 재시작
   * 각 화면은 아래의 그림과 같이 구성되어 있다.
   <p align="center">
-    <img src="https://user-images.githubusercontent.com/75964372/172511987-fce0c19b-1950-4695-86c7-f2b2fa5da78c.png">
-    <img src="https://user-images.githubusercontent.com/75964372/172512249-5b024fcd-347d-44b8-816c-e3ca9e2e0654.png">
+    <img src="https://user-images.githubusercontent.com/75964372/200170325-099b0b6b-0067-41e6-973e-fc71cb76bf25.png">
+    <img src="https://user-images.githubusercontent.com/75964372/200170326-a72d2865-72ed-4438-921b-f1a94ff9b56d.png">
   </p>
 
 ### ※ 게임 방식
@@ -65,7 +68,7 @@
 
 ### ※ 클래스 다이어그램(간략화)
   <p align="">
-    <img src="https://user-images.githubusercontent.com/75964372/172616063-f7985607-8872-4003-8b85-58edc19f3455.png">
+    <img src="https://user-images.githubusercontent.com/75964372/200170408-f66ada75-841e-4de1-b1e7-eff9c2ae193f.png">
   </p>
   
   |분류|설명|
@@ -79,25 +82,24 @@
 ### ※ 주요 구현 설명
 #### 블록 연결
   * 블록 연결 할 때 아래와 같은 예외 조건을 만족해야한다.
-    1. 서로 인접한 블록
-    2. 같은 색상의 블록
-    3. 연결되어있지 않은 블록
-    4. **위 3개의 조건을 모두 만족**
+    * **서로 인접한 블록**
+    * 같은 색상의 블록
+    * 연결되어있지 않은 블록
+    * 위 3개의 조건을 모두 만족
   * 위 조건 중 1의 조건을 검사하기 위해 알고리즘을 Cell의 Offset을 이용해 아래의 방법으로 구현해 보았다.
-    * Offset(Col,Row)을 왼쪽 아래의 그림과 같은 규칙으로 각 Cell에 내부 변수로 부여한다.
-    * Cell의 인접한 Cell과의 Offset 차는 아래와 규칙성(아랫 중간 그림)을 볼 수 있다.
-      * 이때 Offset의 짝수, 홀수 열에 따라 규칙성이 다른 것을 확인 할 수 있다.
-    * 열에 따른 규칙성를 없애기 위해 Offset을 3차원좌표값(오른쪽 아래 그림)으로 치환한다.
-      * 치환 공식
-        > q = Col    
-        > r = row - (col - (col&1)) / 2    
-        > s = -q-r    
-    * 치환한 좌표값의 모든 차가 |1| 이하일 경우 인접한 Cell이므로 이를 조건문으로 Bool 값을 반환하도록 구현했다.
-    <p align="center">
-      <img src="https://user-images.githubusercontent.com/75964372/173723160-6d94c000-7f1b-40bc-9a7d-76bf745a9fdd.png" width="30%">
-      <img src="https://user-images.githubusercontent.com/75964372/173723165-9e11c8c0-20ae-43b0-9631-f373f0ec1758.png" width="30%">
-      <img src="https://user-images.githubusercontent.com/75964372/173723169-a2e5efe2-846a-4327-8f4e-d48ad65fdccd.png" width="30%">
-    </p>
+    1. Offset(Col,Row)을 아래의 그림과 같은 규칙으로 각 Cell에 내부 변수로 부여한다.
+        <p align="center">
+          <img src="https://user-images.githubusercontent.com/75964372/173723160-6d94c000-7f1b-40bc-9a7d-76bf745a9fdd.png" width="30%">
+        </p>    
+    2. 위의 Offset을 3차원좌표값(아래 그림)으로 치환한다.
+       * 치환 공식
+         > q = Col    
+         > r = row - (col - (col&1)) / 2    
+         > s = -q-r    
+         <p align="center">
+           <img src="https://user-images.githubusercontent.com/75964372/200171059-88e60015-46ea-4482-9614-64b148b3a618.png" width="80%">
+         </p>
+    3. 검사할 Cell들의 3차원 좌표계의 각 좌표(q, r, s)의 차가 |1| 이면 'true'를 아니면 'false'를 반환 하도록 구현
   * 코드
     > ``` C#
     > struct Offset {
@@ -172,12 +174,11 @@
   * 이를 **ScriptableObject**와 **GameManager**를 통해 구현했다.
   * **ScriptableObject**
     * 1의 경우 타 모듈의 변수값을 직접적으로 참조하면 모듈간의 분리나 독립성이 약해지는 문제가 발생한다.
-    * 이를 위해 ScpriptableObject를 상속해 FloatVariable 클래스를 정의하고 참조 될 변수들을 미리 에셋화하여 저장해 두었다.
-    * 그 후 각 모듈에서 필요한 곳에서 FloatVariable을 참조하고 Unity의 인스펙터 창에서 에셋화한 변수를 직렬화해 참조
-    * FloatVariable 클래스를 참조해 변수값을 공유할 뿐 각 모듈은 서로를 알지 못한다.
-    <p align="">
-      <img src="https://user-images.githubusercontent.com/75964372/179874168-70d02571-abf5-4a7d-8aea-f709a9b9591b.png" width="40%">
-      <img src="https://user-images.githubusercontent.com/75964372/179874332-e29c5e20-7714-4d0c-9576-d8df95c38424.png" width="40%">
+    * 이를 위해 ScpriptableObject를 상속해 ScriptableFloat 클래스를 정의하고 참조 될 변수들을 미리 에셋화하여 저장해 두었다.
+    * 그 후 각 모듈에서 필요한 곳에서 ScriptableFloat 참조하고 Unity의 인스펙터 창에서 에셋화한 변수를 직렬화해 참조
+    * ScriptableFloat 클래스를 참조해 변수값을 공유할 뿐 각 모듈은 서로를 알지 못한다.
+    <p align="center">
+      <img src="https://user-images.githubusercontent.com/75964372/200172812-03a8534d-fe5c-4a9d-8ed3-84386554bef4.png">
     </p>
   * **GameManager**
     * 모듈 간에 직접 함수를 호출 하기보단 요청을 받아 대신 함수를 호출하도록 GameManager 클래스를 설계했다. 
@@ -221,11 +222,11 @@
   
 #### SoundManager 클래스
   * 효과음의 특성상 여러 상황에서 재생되어지므로 여러 클래스에서 SoundManager로의 접근성이 필요했다.
-  * 이러한 특징 떄문에 처음에 싱글톤 패턴을 고려했으나 Unity Event와 ScriptableObject로 옵저버패턴을 응용해 구현해보았다.
+  * 이러한 특징 떄문에 처음에 싱글톤 패턴을 고려했으나 Unity Event와 ScriptableObject로 **옵저버패턴**을 응용해 구현해보았다.
   * 기본적으로 Scean에 올라가 있는 GameObject들은 UnityEvent를 사용해 SoundManager를 직렬화한 후 함수를 호출하도록 설계하였다.
     * 대채로 UI의 효과음을 이 방식으로 구현했다.
   * 그 외에 프리팹으로 에셋화된 Bubble 같은 오브젝트에선 바로 Scean에 올라가 있는 SoundManager를 직렬화 할 수 없다. 그래서 ScriptableObject로 옵저버 패턴을 응용해 게임 시작시       SoundManager의 EventListener가 Event를 구독하게해 Event 발생시 SoundManager의 함수를 호출하도록 구현했다.
-    <p align="center"><img src="https://user-images.githubusercontent.com/75964372/180136339-2037e198-45df-4b0c-88a1-d74586f97a6f.png"></p>
+    <p align="center"><img src="https://user-images.githubusercontent.com/75964372/200172868-8677cd07-14b6-4d0c-9013-d3b51266ffa7.png"></p>
 
 #### Scean 구성
   <p align="center"><img src="https://user-images.githubusercontent.com/75964372/180141222-79cdf103-addf-4bea-b54a-f3c2da51e783.gif"></p>    
@@ -234,9 +235,3 @@
   * Scean에 미리 모든 화면을 구성해 놓고 게임 시작시 모두 비활성화 시켜 놓고 GameState에 따라 필요한 화면만 활성화 되게 구현했다.
   * 위 처럼 화면 전환 시 다음 화면을 먼저 활성화 시킨 후 카메라를 이동시켜 화면 전환 효과를 주었고 카메라 이동이 완료되면 이전 화면은 비활성화 된다.
   
-  
-## 시연
-
-
-## 결과
-
